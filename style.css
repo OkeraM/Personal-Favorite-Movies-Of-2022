@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+body {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 400;
+    background-color: red;
+    background-image: linear-gradient(
+      to right,
+      purple,
+      purple,
+      rgb(255, 0, 0),
+      green
+    );
+}
+
+/* header */
+
+.header {
+    overflow: hidden;
+    padding: 28px;
+    background-color: black;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 5px 1px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header a {
+    float: left;
+    color: gold;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  .header a.logo {
+    font-size: 34px;
+    font-weight: bold;
+    cursor: default; 
+  }
+  
+  .header-right {
+    float: right;
+  }
+
+  .header-right a {
+    color: black;
+    background-color: white;
+    font-weight: 700;
+    margin: 0 10px;
+    border-radius: 20px;
+  }
+
+  .header-right a:hover {
+    color: black;
+    background-color: gold;
+    font-weight: 700;
+    margin: 0 10px;
+    border-radius: 20px;
+  }
+
+/* container */
+
+.grid-container {
+    display: grid;
+    overflow: hidden;
+    gap: 10px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    margin-right: 10px;
+}
+
+/* grids top-row, middle-row, and bottom-row */
+
+body .grids-top-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 50px;
+    padding-bottom: 10px;
+}
+
+body .grids-middle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 50px;
+    padding-bottom: 10px;
+}
+
+body .grids-bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.grids-top-row a:hover {
+    color: black;
+}
+
+.grids-middle-row a:hover {
+    color: black;
+}
+
+.grids-bottom-row a:hover {
+    color: black;
+}
+
+/* grid items */
+
+.grid-item {
+   background-color: black;
+   color: black; /* changes background shadow to black */
+   width: 28vw;
+   height: 41vw;
+   border-radius: 100px;
+   box-shadow: 15px -10px;
+   padding-top: 180px;
+   -webkit-transform: scale(1);
+   transform: scale(1);
+   -webkit-transition: .3s ease-in-out;
+   transition: .3s ease-in-out;
+   animation: drop-in 2000ms; /* adjust time in which the grid-items drop in */
+}
+
+.grid-item:hover {
+    -webkit-transform: scale(1.3);
+	transform: scale(1.02); /* grid-item pop's out when the cursor is placed on it */
+    cursor: pointer;
+}
+
+@keyframes drop-in {     /* the keyframe which allows grid-items to drop in */
+    from {
+      transform:
+        rotate(-1deg) translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform:
+        rotate(0deg) translateY(0%);
+      opacity: 1;
+    }
+  }
+
+.grid-item-1 {
+   background-image: url("./images/Black_Adam.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center; 
+}
+
+.grid-item-2 {
+   background-image: url("./images/The_Batman_copy.png");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+}
+
+.grid-item-3 {
+   background-image: url("./images/Doctor_strange_in_the_multiverse_of_madness_copy.png");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+}
+
+.grid-item-4 {
+   background-image: url("./images/Black_Panther_Wakanda_Forever_copy.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.grid-item-5 {
+   background-image: url("./images/Thor_Love_&_Thunder_copy.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.grid-item-6 {
+   background-image: url("./images/Top_Gun_movie_copy.jpeg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.grid-item-7 {
+    background-image: url("./images/MoonFall.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-item-8 {
+    background-image: url("./images/Scream_2022.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-item-9 {
+    background-image: url("./images/The_Secrets_of_DumbleDore_copy.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* footer */
+
+footer {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* header */
+
+@media screen and (max-width: 770px) {
+
+    .grid-item {
+        background-color: black;
+        color: black; /* changes background shadow to black */
+        width: 24vw;
+        height: 41vw;
+        border-radius: 100px;
+        box-shadow: 15px -10px;
+        padding-top: 180px;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        animation: drop-in 2000ms; /* adjust time in which the grid-items drop in */
+     }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header a {
+      float: none;
+      display: block;
+      text-align: center;
+      margin: 12px;
+    }
+    
+    .header-right {
+      float: none;
+    }
+
+    .header a.logo {
+        font-size: 34px;
+        font-weight: bold;
+        cursor: default; 
+    }
+    
+}
+
+@media only screen and (max-width: 587px) {
+  .header a.logo {
+       line-height: 40px;
+  }
+}
+
+@media only screen and (max-width: 434px) {
+    .header a.logo {
+        font-size: 7vw;
+        font-weight: bold;
+        cursor: default; 
+    }
+}
+
+/* responsive design mobile */
+
+@media only screen and (max-width: 375px) {
+
+    header {
+        height: 5vh;
+    }
+
+    header h2 {
+        font-size: 5.7vw;
+        color: gold;
+        margin-top: 9px;
+    }
+
+    .btn {
+        padding: 10px;
+    }
+     
+    .grid-item {
+        width: 20vw;
+        height: 20vh;
+        box-shadow: 15px -10px;
+    }
+
+}
